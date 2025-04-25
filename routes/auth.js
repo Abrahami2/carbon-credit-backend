@@ -68,17 +68,17 @@ router.post(
         email
       });
 
-      if (userStatus === USER_STATUS.PENDING) {
-        return res.status(403).json({
-          message: 'Your account is still under review. Please wait for admin approval.',
-        });
-      }
+      // if (userStatus === USER_STATUS.PENDING) {
+      //   return res.status(403).json({
+      //     message: 'Your account is still under review. Please wait for admin approval.',
+      //   });
+      // }
 
-      if (userStatus === USER_STATUS.REJECTED) {
-        return res.status(403).json({
-          message: 'Your account has been rejected. Please contact support for more information.',
-        });
-      }
+      // if (userStatus === USER_STATUS.REJECTED) {
+      //   return res.status(403).json({
+      //     message: 'Your account has been rejected. Please contact support for more information.',
+      //   });
+      // }
 
       SuccessResponse({
         res,

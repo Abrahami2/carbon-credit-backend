@@ -2,6 +2,9 @@
   "name": "carbon-credit-backend",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "nodemon --exec babel-node index.js"
   },
