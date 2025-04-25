@@ -2,6 +2,8 @@ import { Trip } from '../../models';
 
 import { HTTP_CODES } from '../../routes/utils/constants';
 
+import GetAllTrips from './get-trips';
+
 const AddNewTrip = async ({
   userId,
   date,
@@ -26,7 +28,11 @@ const AddNewTrip = async ({
     tripProof: proof
   });
 
-  return 'New Trip Added';
+  const trips = await GetAllTrips({
+    userId
+  });
+
+  return trips;
 };
 
 export default AddNewTrip;

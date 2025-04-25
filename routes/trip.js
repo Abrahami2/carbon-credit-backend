@@ -29,7 +29,7 @@ router.post(
         }
       } = req;
 
-      const message = await AddNewTrip({
+      const trips = await AddNewTrip({
         userId,
         date,
         mode,
@@ -40,7 +40,7 @@ router.post(
 
       SuccessResponse({
         res,
-        message
+        trips
       });
     } catch (err) {
       CatchResponse({
